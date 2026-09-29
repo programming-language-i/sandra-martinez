@@ -93,7 +93,7 @@ def dividir(a, b):
 
 
 with ThreadPoolExecutor() as pool:
-    futuro = pool.submit(dividir, 1, 0)
+    futuro = pool.submit(dividir, 1, 0)//lanza error porque no es posible la dic¿vision en cero//
 print("listo")
 ```
 
