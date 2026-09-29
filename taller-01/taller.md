@@ -106,7 +106,7 @@ hilo = threading.Thread(target=print, args=("hola",))
 hilo.start()
 hilo.join()
 print(hilo.is_alive())
-hilo.start()
+hilo.start()// el error esta aca porque solo lo debe ejecutar una sola vez//
 ```
 
 ### B5. Procesos y una lista global
