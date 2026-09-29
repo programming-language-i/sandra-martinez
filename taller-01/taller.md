@@ -58,10 +58,10 @@ inicio = time.perf_counter()
 for i in range(3):
     hilo = threading.Thread(target=tarea, args=(i,))
     hilo.start()
-    hilo.join()
+    hilo.join()//espera a que el hilo termine esperando los demas hilos//
 print(f"{time.perf_counter() - inicio:.1f} s")
 ```
-
+//se demora 3 segundos//
 ### B2. Daemon con `finally`
 
 ```python
