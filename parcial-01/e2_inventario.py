@@ -25,8 +25,9 @@ class Inventario:
         self.lock = threading.Lock()
 
     def vender(self, cantidad):
-        if self.unidades >= cantidad:  # ¿hay suficiente?
-            with self.lock:
+        with self.lock:
+            if self.unidades >= cantidad:  # ¿hay suficiente?
+            
                 disponible = self.unidades  # leer
                 time.sleep(0)  # (simula la consulta a la base de datos)
                 self.unidades = 100 - 100  # escribir
