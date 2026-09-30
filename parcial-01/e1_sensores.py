@@ -20,6 +20,7 @@ Requisitos:
         P1: 4 lecturas, promedio 1001.5
         Tiempo total: 1.5 s
 """
+
 import threading
 import time
 
@@ -66,6 +67,8 @@ for sensor in hilos_sensores:
 
 # TODO 4: imprima "<nombre>: <n> lecturas, promedio <promedio>" por cada sensor
 for sensor in hilos_sensores:
-    print(f"{sensor.nombre}: {len(sensor.lecturas)} lecturas, promedio {sensor.promedio:.1f}")
+    print(
+        f"{sensor.nombre}: {len(sensor.lecturas)} lecturas, promedio {sensor.promedio:.1f}"
+    )
 
 print(f"Tiempo total: {time.perf_counter() - inicio:.1f} s")
