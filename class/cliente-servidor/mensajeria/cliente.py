@@ -21,6 +21,7 @@ def recibir_mensaje(conexion):
             print("Conexion terminada")
             break
 
+
 nombre = input("Ingrese su nombre: ")
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as cliente:
@@ -40,5 +41,3 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as cliente:
             break
 
         cliente.sendall(f"{nombre}: {mensaje}".encode())
-        
-   
